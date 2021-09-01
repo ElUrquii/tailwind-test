@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./components/UI/Card";
 
 function App() {
   return (
@@ -6,6 +7,11 @@ function App() {
       <h1 className="text-6xl font-extrabold text-gray-800 antialiased text-center">
         Tailwind
       </h1>
+      <div className='mx-4 grid gap-4 grid-cols-1 md:grid-cols-3 justify-items-stretch'>
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }
