@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/UI/Card";
 import axios from "axios";
+import Navbar from "./components/UI/Navbar";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -32,31 +33,34 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto my-6">
-      <h1 className="text-6xl font-extrabold text-gray-800 antialiased text-center mb-6">
-        Crypto Viewer
-      </h1>
-      <div className="flex justify-center w-full">
-        <input
-          placeholder="Search Coin"
-          className="mb-8 py-2 px-3 shadow-md rounded-md"
-          onChange={handleSearchValue}
-        />
+    <>
+      <Navbar />
+      <div className="container mx-auto my-6">
+        <h1 className="text-6xl font-extrabold text-gray-800 antialiased text-center mb-6">
+          Crypto Viewer
+        </h1>
+        <div className="flex justify-center w-full">
+          <input
+            placeholder="Search Coin"
+            className="mb-8 py-2 px-3 shadow-md border border-gray-200 rounded-md"
+            onChange={handleSearchValue}
+          />
+        </div>
+        <div className="mx-4 grid gap-4 grid-cols-1 md:grid-cols-3 justify-items-stretch">
+          {filteredData.map((coin) => {
+            return (
+              <Card
+                key={coin.market_cap_rank}
+                img={coin.image}
+                name={coin.symbol}
+                price={coin.current_price}
+                coinId={coin.id}
+              />
+            );
+          })}
+        </div>
       </div>
-      <div className="mx-4 grid gap-4 grid-cols-1 md:grid-cols-3 justify-items-stretch">
-        {filteredData.map((coin) => {
-          return (
-            <Card
-              key={coin.market_cap_rank}
-              img={coin.image}
-              name={coin.symbol}
-              price={coin.current_price}
-              coinId={coin.id}
-            />
-          );
-        })}
-      </div>
-    </div>
+    </>
   );
 }
 
