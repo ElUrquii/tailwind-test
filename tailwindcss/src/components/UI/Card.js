@@ -35,13 +35,13 @@ const Card = (props) => {
         </p>
         <div className="grid grid-cols-2 my-2">
           <button className="rounded-md font-bold bg-gray-800 text-gray-100 py-2  mx-2 transition duration-250 ease-in-out hover:bg-gray-900">
-            Comprar
+            Info
           </button>
           <button
             onClick={redirectToCryptoPage}
             className="rounded-md font-bold bg-transparent border-2 border-gray-800 text-gray-800  mx-2 py-2 transition duration-250 ease-in-out hover:bg-gray-800 hover:text-gray-100"
           >
-            Mas Info
+            Website
           </button>
         </div>
       </div>
