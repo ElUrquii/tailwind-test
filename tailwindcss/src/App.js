@@ -9,28 +9,18 @@ import Trending from "./components/Pages/Trending";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Router>
+      <div>
         <Switch>
-          <Route path="/categories">
-            <Categories />
-          </Route>
-          <Route path="/exchanges">
-            <Exchanges />
-          </Route>
-          <Route path="/news">
-            <News />
-          </Route>
-          <Route path="/trending">
-            <Trending />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/categories" component={Categories} />
+          <Route path="/exchanges" component={Exchanges} />
+          <Route path="/news" component={News} />
+          <Route path="/trending" component={Trending} />
+          <Route path="/" component={Home} exact />
         </Switch>
-      </Router>
-    </>
+      </div>
+    </Router>
   );
 }
 
