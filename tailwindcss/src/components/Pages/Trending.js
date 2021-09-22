@@ -1,9 +1,10 @@
 import React from "react";
+import TrendingPage from "../TrendingPage";
 
 const Trending = () => {
   return (
     <>
-      <h1>Trending</h1>
+      <TrendingPage />
     </>
   );
 };
