@@ -1,9 +1,10 @@
 import React from "react";
+import CategoriesPage from "../CategoriesPage";
 
 const Categories = () => {
   return (
     <>
-      <h1>Categories</h1>
+      <CategoriesPage />
     </>
   );
 };

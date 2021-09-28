@@ -1,9 +1,10 @@
 import React from "react";
+import ExchangesPage from "../ExchangesPage";
 
 const Exchanges = () => {
   return (
     <>
-      <h1>Exchanges</h1>
+      <ExchangesPage />
     </>
   );
 };
