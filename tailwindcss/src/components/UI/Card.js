@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   const redirectToCryptoPage = () => {
@@ -34,9 +35,12 @@ const Card = (props) => {
           Current Price: ${props.price}
         </p>
         <div className="grid grid-cols-2 my-2">
-          <button className="rounded-md font-bold bg-gray-800 text-gray-100 py-2  mx-2 transition duration-250 ease-in-out hover:bg-gray-900">
+          <Link
+            to={`/info/${props.coinId}`}
+            className="text-center rounded-md font-bold bg-gray-800 text-gray-100 py-2  mx-2 transition duration-250 ease-in-out hover:bg-gray-900"
+          >
             Info
-          </button>
+          </Link>
           <button
             onClick={redirectToCryptoPage}
             className="rounded-md font-bold bg-transparent border-2 border-gray-800 text-gray-800  mx-2 py-2 transition duration-250 ease-in-out hover:bg-gray-800 hover:text-gray-100"

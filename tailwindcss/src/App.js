@@ -6,6 +6,7 @@ import Categories from "./components/Pages/Categories";
 import Exchanges from "./components/Pages/Exchanges";
 import News from "./components/Pages/News";
 import Trending from "./components/Pages/Trending";
+import CryptoInfo from "./components/CryptoInfo";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/exchanges" component={Exchanges} />
           <Route path="/news" component={News} />
           <Route path="/trending" component={Trending} />
+          <Route path="/info/:coinId" component={CryptoInfo} />
           <Route path="/" component={Home} exact />
         </Switch>
       </div>
